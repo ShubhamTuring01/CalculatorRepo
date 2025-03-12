@@ -7,6 +7,11 @@ long long add(int firstNum, int secondNum)
 	return firstNum + secondNum;
 }
 
+long long subtract(int firstNum, int secondNum)
+{
+	return firstNum - secondNum;
+}
+
 int main()
 {
 	int firstNum=0,secondNum=0;
@@ -19,6 +24,7 @@ int main()
 	
 	std::cout << "Select the opration:"<<"\n";
 	std::cout << "+ for add\n";
+	std::cout << "- for subtraction\n";
 
 	std::cin >> op;
 	std::cout << "Enter second num\n";
@@ -28,6 +34,8 @@ int main()
 
 	if (op == '+')
 		result += add(firstNum, secondNum);
+	else if (op == '-')
+		result += subtract(firstNum, secondNum);
 	
 	
 	std::cout << "\nResult:" << result << "\n";
