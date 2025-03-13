@@ -17,6 +17,11 @@ long long multiply(int firstNum, int secondNum)
 	return firstNum * secondNum;
 }
 
+long long divide(int firstNum, int secondNum)
+{
+	return firstNum / secondNum;
+}
+
 int main()
 {
 	int firstNum=0,secondNum=0;
@@ -31,6 +36,7 @@ int main()
 	std::cout << "+ for add\n";
 	std::cout << "- for subtraction\n";
 	std::cout << "* for multiplication\n";
+	std::cout << "/ for divide\n";
 
 	std::cin >> op;
 	std::cout << "Enter second num\n";
@@ -44,6 +50,8 @@ int main()
 		result += subtract(firstNum, secondNum);
 	else if (op == '*')
 		result += multiply(firstNum, secondNum);
+	else if (op == '/')
+		result += divide(firstNum, secondNum);
 	
 	
 	std::cout << "\nResult:" << result << "\n";
